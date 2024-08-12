@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Exam_5_izida_kubekova</title>
+</head>
+
+<body>
+    <div class="background">
+        <div class="container">
+            <div class="flex-row username-row">
+                <div class="flex-column wide-column">
+                    <p class="green-text username"><span id="name"></span>
+                        <span id="last-name"></span></p>
+                </div>
+                <div class="flex-column wide-column">
+                    <button id="edit-popup-btn" class="btn-small btn-green">Редактировать<br>профиль</button>
+                </div>
+                <div class="flex-column tiny-column">
+                    <button id="delete-popup-btn" class="btn-small btn-red">Удалить<br>все подписки</button>
+                </div>
+                <div class="flex-column tiny-column">
+                    <button id="subscribe-popup-btn" class="btn-small btn-green">Добавить<br>подписку</button>
+                </div>
+            </div>
+            <div class="form-box">
+                <form id="form">
+                    <div class="flex-row">
+                        <div class="flex-column wide-column">
+                            <textarea id="message-text" class="textarea" placeholder="Введите текст сообщения..." required></textarea>
+                            <button type="submit" id="send-btn" class="btn-custom btn-green">Опубликовать</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="content-box" id="content-box">
+            </div>
+        </div>
+        <div id="error-popUp" class="popUp-container black-opacity-bg">
+            <div class="popUp" id="error-box">
+            </div>
+        </div>
+        <div id="edit-popUp" class="popUp-container black-opacity-bg">
+            <div class="popUp">
+                <form id="edit-form">
+                    <div class="flex-row">
+                        <div class="flex-column wide-column">
+                            <p class="green-text">Отредактируйте имя
+                                <br>и фамилию</p>
+                            <input type="text" id="newUserName" placeholder="Введите Ваше имя..." required>
+                            <input type="text" id="newLastName" placeholder="Введите Вашу фамилию..." required>
+                        </div>
+                        <div class="flex-column tiny-column">
+                            <button type="submit" id="edit-btn" class="btn-custom btn-green">Сохранить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="subscribe-popUp" class="popUp-container black-opacity-bg">
+            <div class="popUp">
+                <form id="subscribe-form">
+                    <div class="flex-row">
+                        <div class="flex-column wide-column">
+                            <p class="green-text">Введите адрес пользователя,
+                                <br>на которого Вы хотели бы подписаться</p>
+                            <input type="email" id="email" placeholder="Введите эл. адрес..." required>
+                        </div>
+                        <div class="flex-column tiny-column">
+                            <button type="submit" id="subscribe-btn" class="btn-custom btn-green">Добавить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="delete-popUp" class="popUp-container black-opacity-bg">
+            <div class="popUp">
+                <div class="flex-column">
+                    <p class="error-text text-to-center">Вы уверены,<br>что хотите<br>удалить все подписки?</p>
+                    <div class="flex-row btn-group">
+                        <button id="not-confirmed" class="btn-custom btn-green">Нет</button>
+                        <form id="delete-form">
+                            <button type="submit" id="delete-btn" class="btn-custom btn-red">Да</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
